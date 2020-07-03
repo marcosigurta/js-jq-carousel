@@ -4,6 +4,10 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: #ccc;
+}
+
 .container-flex {
   display: flex;
   width: 100%;
@@ -16,6 +20,11 @@
   margin: 0 30px;
   font-size: 50px;
   cursor: pointer;
+  transition: all 0.35s ease-in-out;
+}
+
+[class*="fa-angle"]:hover {
+  transform: scale(1.2);
 }
 
 .container-flex .img-wrapper {
@@ -59,26 +68,25 @@
 }
 
 @media (max-width: 700px) {
-    .container-flex .img-wrapper {
-        width: 100%;
-        height: 100vh;
-        position: relative;
-    }
+  .container-flex .img-wrapper {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+  }
 
-    [class*="fa-angle"] {
-        margin: 0 0px;
-        font-size: 50px;
-        cursor: pointer;
-        position: absolute;
-        z-index: 1;
-        color: #fff;
-      }
+  [class*="fa-angle"] {
+    margin: 0 0px;
+    font-size: 50px;
+    cursor: pointer;
+    position: absolute;
+    z-index: 1;
+    color: #fff;
+  }
 
-      .container-flex .fa-angle-right {
-          right: 10px;
-          
-      }
-      .container-flex .fa-angle-left {
-         left: 10px;
-      }
+  .container-flex .fa-angle-right {
+    right: 10px;
+  }
+  .container-flex .fa-angle-left {
+    left: 10px;
+  }
 }
